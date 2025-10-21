@@ -1,0 +1,8 @@
+# IDE / Editor files
+.DS_Store
+.vscode/
+*.swp
+*.swo
+
+# Backup files
+*~
