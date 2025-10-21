@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Official website of Adv. Khandappa Dasan — Chairman of Nivedita Educational Trust, social reformer, and educationist serving North Karnataka with 6 institutions focused on inclusive education for SC/ST communities." />
+  <meta name="keywords" content="Adv Khandappa Dasan, Nivedita Educational Trust, Yadgir colleges, Siddarth College of Pharmacy, SC/ST education Karnataka, Best colleges in Yadgir, BJP leader Yadgir, Advocate Dasan, Commerce degree college Yadgir">
+  <meta name="author" content="Adv. Khandappa Dasan">
+  <meta property="og:title" content="Adv. Khandappa Dasan — dasan.in">
+  <meta property="og:description" content="Chairman of Nivedita Educational Trust, serving North Karnataka with 6 institutions focused on inclusive education for SC/ST communities since 1980s.">
+  <meta property="og:image" content="https://dasan.in/hero.jpg">
+  <meta property="og:url" content="https://dasan.in">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Adv. Khandappa Dasan — dasan.in</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0A1F44;
+      --gold: #D4AF37;
+      --ivory: #F8F5EF;
+      --ink: #111418;
+      --muted: #6C7480;
+      --gold-grad: linear-gradient(135deg, #D4AF37 0%, #E9C766 50%, #C9A227 100%);
+      --max: 1100px;
+      --radius: 14px;
+      --shadow: 0 8px 30px rgba(10, 31, 68, 0.15);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: 92%; max-width: var(--max); margin: 0 auto; }
+    /* NAV */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: saturate(150%) blur(8px);
+      background: rgba(248, 245, 239, 0.75);
+      border-bottom: 1px solid rgba(17, 20, 24, 0.06);
+    }
+    .nav .inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+    }
+    .crest {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--gold-grad);
+      display: grid;
+      place-items: center;
+      color: #231F20;
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.7), 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+    .menu {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .lang {
+      font-size: 0.95rem;
+      color: var(--muted);
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--gold);
+      color: var(--navy);
+      transition: 0.25s;
+      font-weight: 600;
+    }
+    .btn:hover {
+      background: var(--gold);
+      color: #1d1a1a;
+      box-shadow: 0 6px 16px rgba(212, 175, 55, 0.25);
+    }
+    /* HERO */
+    .hero {
+      position: relative;
+      color: #fff;
+      min-height: 72vh;
+      display: grid;
+      align-items: center;
+      isolation: isolate;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+        linear-gradient(to bottom, #0A1F44, #0D2550);
+    }
+    .hero-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+    }
+    .particles {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0.6;
+      animation: float 15s infinite ease-in-out;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+      10% { opacity: 0.6; }
+      90% { opacity: 0.4; }
+      50% { transform: translateY(-100px) translateX(20px); }
+    }
+    .hero .wrap {
+      position: relative;
+      padding: 100px 0;
+      color: white;
+    }
+    .kicker {
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      color: #E9C766;
+    }
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 1.15;
+      margin: 10px 0 14px;
+    }
+    .sub {
+      max-width: 760px;
+      color: #E8E5DC;
+      font-size: 1.05rem;
+    }
+    .cta {
+      margin-top: 22px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn--ghost {
+      border-color: #fff;
+      color: #fff;
+    }
+    .btn--ghost:hover {
+      background: #fff;
+      color: var(--navy);
+    }
+    .stats {
+      margin-top: 26px;
+      display: flex;
+      gap: 26px;
+      flex-wrap: wrap;
+      color: #E8E5DC;
+      font-size: 0.95rem;
+    }
+    .stat {
+      padding-right: 24px;
+      border-right: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .stat:last-child {
+      border-right: none;
+    }
+    .num {
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
+      color: #fff;
+    }
+    /* SECTIONS */
+    section {
+      padding: 70px 0;
+    }
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+    .section-title .line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold), rgba(212, 175, 55, 0));
+    }
+    .card {
+      background: #fff;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 26px;
+    }
+    @media (max-width: 900px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+    .prose p {
+      margin: 0 0 12px;
+    }
+    .dropcap:first-letter {
+      float: left;
+      font-family: "Playfair Display", serif;
+      font-size: 52px;
+      line-height: 0.9;
+      padding: 6px 10px 0 0;
+      color: var(--navy);
+    }
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .list li {
+      padding: 8px 0;
+      border-bottom: 1px dashed rgba(10, 31, 68, 0.12);
+    }
+    .list li:last-child {
+      border-bottom: none;
+    }
+    /* INSTITUTIONS */
+    .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .inst {
+      padding: 18px;
+    }
+    .inst h3 {
+      margin: 0 0 6px;
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: 20px;
+    }
+    .tag {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .inst .more {
+      margin-top: 10px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .inst .more span {
+      background: var(--gold-grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    /* NEWS */
+    .news-item {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(10, 31, 68, 0.08);
+    }
+    .news-item:last-child {
+      border-bottom: none;
+    }
+    .news-date {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    /* SOCIAL */
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .social-links a {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.1);
+      color: var(--navy);
+      display: grid;
+      place-items: center;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+    .social-links a:hover {
+      background: var(--gold);
+    }
+    /* FOOTER */
+    .footer {
+      background: var(--navy);
+      color: #e8e5dc;
+      padding: 24px 0;
+      border-top: 1px solid rgba(233, 199, 102, 0.35);
+    }
+    /* REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.in {
+      opacity: 1;
+      transform: none;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav" aria-label="Main navigation">
+    <div class="wrap inner">
+      <div class="brand" aria-label="Adv. Khandappa Dasan">
+        <div class="crest" aria-hidden="true">KD</div>
+        <div>Adv. Khandappa Dasan</div>
+      </div>
+      <div class="menu">
+        <a href="#about">About</a>
+        <a href="#trust">Trust</a>
+        <a href="#institutions">Institutions</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <span class="lang">EN | KN</span>
+        <a class="btn" href="#institutions">Admissions</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <header class="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg"></div>
+      <div class="particles" id="particles"></div>
+      <div class="wrap">
+        <div class="kicker">Chairman • Nivedita Educational Trust</div>
+        <h1 id="hero-heading">Building Futures. Serving Communities.</h1>
+        <p class="sub">Advocate, educationist, and social reformer with 40+ years of public service across North Karnataka — dedicated to inclusive education and upliftment of SC/ST and the downtrodden.</p>
+        <div class="cta">
+          <a class="btn btn--ghost" href="#about">Explore His Legacy</a>
+          <a class="btn" href="#institutions">Visit Our Colleges</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="num" data-count="40">0</div> Years of Service</div>
+          <div class="stat"><div class="num" data-count="6">0</div> Institutions</div>
+          <div class="stat"><div class="num" data-count="12000">0</div> Students Impacted</div>
+          <div class="stat"><div class="num" data-count="12">0</div> Awards & Honors</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="wrap">
+      <div class="section-title reveal"><span>About Adv. Dasan</span><div class="line"></div></div>
+      <div class="two-col">
+        <div class="card prose reveal" style="padding:20px">
+          <p class="dropcap"><strong>Adv. Khandappa Dasan</strong> is a seasoned public servant, former State Executive Member (BJP SC Morcha, Karnataka), Ex‑Zilla Panchayat Member, and the Founder‑Chairman of Nivedita Educational Trust. His life’s work spans grassroots governance, social reform, and institution-building across Yadgir and beyond.</p>
+          <p>Guided by a simple creed — dignity, opportunity, and education for all — he has led initiatives that opened doors for the marginalized, especially SC/ST communities.</p>
+          <ul class="list">
+            <li>Founder & Chairman — Nivedita Educational Trust (6 institutions)</li>
+            <li>Ex‑State Executive Member — BJP SC Morcha, Karnataka</li>
+            <li>Ex‑Member — Zilla Panchayat, Gulbarga; Ex‑Municipal Councillor, Yadgir</li>
+            <li>Awards — Karnataka Ratna Shree; Best Politician Award; Senior Citizen Award</li>
+          </ul>
+        </div>
+        <div class="card reveal" style="padding:20px">
+          <h3 style="margin:0 0 8px; font-family:'Playfair Display',serif; color:var(--navy)">Contact & Office</h3>
+          <p>Nivedita Educational Trust Campus,<br/>Opp Rachotti Veeranna Temple, Chittapur Road,<br/>Yadgir, Karnataka – 585202</p>
+          <p><strong>Phone:</strong> 9448104694, 08473‑252666 / 252777<br/><strong>Email:</strong> khandappadasan53@gmail.com</p>
+          <div style="height:180px; border-radius:12px; overflow:hidden; border:1px solid rgba(17,20,24,.1)">
+            <iframe
+              title="Location of Nivedita Educational Trust Campus"
+              width="100%"
+              height="100%"
+              style="border:0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.385422511597!2d77.13034937518235!3d16.74284998458927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbf5e9a4a3a3a3%3A0x1a3a3a3a3a3a3a3a!2sNivedita%20Educational%20Trust!5e0!3m2!1sen!2sin!4v1729500000000!5m2!1sen!2sin"
+              allowfullscreen
+              aria-label="Map showing Nivedita Educational Trust campus, Opp Rachotti Veeranna Temple, Chittapur Road, Yadgir"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section id="trust" class="wrap">
+      <div class="section-title reveal"><span>Nivedita Educational Trust</span><div class="line"></div></div>
+      <div class="card reveal" style="padding:20px">
+        <p>Established to deliver accessible, quality education across disciplines — technical, healthcare, arts, commerce & sciences — the Trust operates six institutions serving students from urban and rural North Karnataka.</p>
+        <div class="badges" style="display:flex; gap:12px; flex-wrap:wrap; margin-top:8px">
+          <div style="border:1px solid rgba(212,175,55,.6); color:var(--navy); padding:8px 12px; border-radius:999px; background:rgba(212,175,55,.06)">Inclusive Education</div>
+          <div style="border:1px solid rgba(212,175,55,.6); color:var(--navy); padding:8px 12px; border-radius:999px; background:rgba(212,175,55,.06)">Healthcare & Paramedical</div>
+          <div style="border:1px solid rgba(212,175,55,.6); color:var(--navy); padding:8px 12px; border-radius:999px; background:rgba(212,175,55,.06)">Technical & Polytechnic</div>
+          <div style="border:1px solid rgba(212,175,55,.6); color:var(--navy); padding:8px 12px; border-radius:999px; background:rgba(212,175,55,.06)">Commerce & Arts</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTITUTIONS -->
+    <section id="institutions" class="wrap">
+      <div class="section-title reveal"><span>Our Institutions</span><div class="line"></div></div>
+      <div class="grid">
+        <div class="card inst reveal">
+          <h3>Nivedita Polytechnic College</h3>
+          <div class="tag">Diploma Programs • Labs • Career Support</div>
+          <div class="more"><span>View details →</span></div>
+        </div>
+        <div class="card inst reveal">
+          <h3>Nivedita School of Nursing</h3>
+          <div class="tag">GNM / B.Sc Nursing • Clinical Rotations</div>
+          <div class="more"><span>View details →</span></div>
+        </div>
+        <div class="card inst reveal">
+          <h3>Siddarth College of Pharmacy</h3>
+          <div class="tag">D.Pharm / B.Pharm • Pharmacy Practice</div>
+          <div class="more"><span>View details →</span></div>
+        </div>
+        <div class="card inst reveal">
+          <h3>Nivedita Paramedical College</h3>
+          <div class="tag">Allied Health • Skill‑based Training</div>
+          <div class="more"><span>View details →</span></div>
+        </div>
+        <div class="card inst reveal">
+          <h3>Nivedita Science, Commerce & Arts Degree College</h3>
+          <div class="tag">B.A. / B.Com / B.Sc • Holistic Learning</div>
+          <div class="more"><span>View details →</span></div>
+        </div>
+        <div class="card inst reveal">
+          <h3>Nivedita Science, Commerce & Arts Jr. College</h3>
+          <div class="tag">PUC • Commerce, Science, Arts</div>
+          <div class="more"><span>View details →</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section id="news" class="wrap">
+      <div class="section-title reveal"><span>News & Announcements</span><div class="line"></div></div>
+      <div class="card reveal" style="padding:20px">
+        <div class="news-item">
+          <div class="news-date">15 Oct 2025</div>
+          <strong>Admissions Open for Academic Year 2026–27</strong>
+          <p>Applications are now open for all undergraduate and diploma programs. Scholarships available for SC/ST students.</p>
+        </div>
+        <div class="news-item">
+          <div class="news-date">28 Sep 2025</div>
+          <strong>Nivedita Pharmacy Students Win State-Level Competition</strong>
+          <p>Team from Siddarth College of Pharmacy secures 1st prize in Karnataka Inter-College Pharma Quiz.</p>
+        </div>
+        <div class="news-item">
+          <div class="news-date">10 Aug 2025</div>
+          <strong>Trust Celebrates 25 Years of Educational Service</strong>
+          <p>Grand event held at campus with dignitaries, alumni, and community leaders.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="wrap">
+      <div class="quote card reveal" style="padding:26px; border-left:6px solid var(--gold)">
+        <blockquote style="margin:0; font-family:'Playfair Display',serif; font-size:20px; color:var(--navy)">“I am dedicated to serving the people — especially SC/ST and the downtrodden. If entrusted with responsibility, I will fulfill the people’s aspirations and elevate the party’s prestige.”</blockquote>
+        <cite style="display:block; margin-top:8px; color:var(--muted); font-style:normal">— Adv. Khandappa Dasan</cite>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="wrap contact">
+      <div class="section-title reveal"><span>Get in Touch</span><div class="line"></div></div>
+      <div class="row" style="display:grid; grid-template-columns:1.1fr .9fr; gap:18px">
+        <div class="card reveal" style="padding:20px">
+          <p><strong>Address:</strong><br/>Nivedita Educational Trust Campus,<br/>Opp Rachotti Veeranna Temple, Chittapur Road,<br/>Yadgir – 585202</p>
+          <p><strong>Phone:</strong> 9448104694, 08473‑252666 / 252777</p>
+          <p><strong>Email:</strong> khandappadasan53@gmail.com</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="YouTube">Y</a>
+            <a href="#" aria-label="Instagram">I</a>
+          </div>
+        </div>
+        <div class="card reveal" style="padding:20px">
+          <form id="contact-form">
+            <div style="display:grid; gap:10px">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" required placeholder="Your name"/>
+              </div>
+              <div>
+                <label for="contact">Email / Phone</label>
+                <input id="contact" required placeholder="Your email or phone"/>
+              </div>
+              <div>
+                <label for="subject">Subject</label>
+                <select id="subject">
+                  <option>Admissions</option>
+                  <option>Donations / Sponsorship</option>
+                  <option>Media / Visit</option>
+                  <option>General</option>
+                </select>
+              </div>
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" placeholder="How can we help?"></textarea>
+              </div>
+              <button class="btn" type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="wrap" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center">
+      <div>© <span id="year"></span> dasan.in • Nivedita Educational Trust</div>
+      <div style="opacity:.8">Crafted with dignity & purpose</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('contact-form')?.addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Thank you! Your message has been received. We will respond within 48 hours.');
+      e.target.reset();
+    });
+    // Particles (desktop only)
+    document.addEventListener('DOMContentLoaded', () => {
+      const particlesContainer = document.getElementById('particles');
+      if (particlesContainer && window.innerWidth > 768) {
+        for (let i = 0; i < 12; i++) {
+          const p = document.createElement('div');
+          p.className = 'particle';
+          p.style.left = Math.random() * 100 + '%';
+          p.style.top = Math.random() * 100 + '%';
+          p.style.animationDelay = Math.random() * 15 + 's';
+          p.style.width = (2 + Math.random() * 3) + 'px';
+          p.style.height = p.style.width;
+          particlesContainer.appendChild(p);
+        }
+      }
+    });
+    // Reveal on scroll
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    // Count-up
+    const counters = document.querySelectorAll('.num[data-count]');
+    const io2 = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        const target = +el.dataset.count;
+        const dur = 1200;
+        const start = performance.now();
+        function tick(t) {
+          const p = Math.min(1, (t - start) / dur);
+          el.textContent = Math.floor(target * (0.1 + 0.9 * p)).toLocaleString();
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        io2.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(c => io2.observe(c));
+  </script>
+</body>
+</html>
